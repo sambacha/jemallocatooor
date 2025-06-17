@@ -1,5 +1,5 @@
 [package]
-name = "tikv-jemallocator-global"
+name = "jemallocatooor-global"
 # Make sure to update the version in the readme as well:
 version = "0.6.0"
 authors = [
@@ -11,38 +11,38 @@ license = "MIT/Apache-2.0"
 readme = "README.md"
 keywords = ["allocator", "jemalloc"]
 categories = ["memory-management", "api-bindings"]
-repository = "https://github.com/tikv/jemallocator"
-homepage = "https://github.com/tikv/jemallocator"
-documentation = "https://docs.rs/tikv-jemallocator-global"
+repository = "https://github.com/jemallocatooor/jemallocatooor"
+homepage = "https://github.com/jemallocatooor/jemallocatooor"
+documentation = "https://docs.rs/jemallocatooor-global"
 description = """
 Sets `jemalloc` as the `#[global_allocator]`
 """
 
 [badges]
-travis-ci = { repository = "tikv/jemallocator" }
-codecov = { repository = "tikv/jemallocator" }
-is-it-maintained-issue-resolution = { repository = "tikv/jemallocator" }
-is-it-maintained-open-issues = { repository = "tikv/jemallocator" }
+travis-ci = { repository = "jemallocatooor/jemallocatooor" }
+codecov = { repository = "jemallocatooor/jemallocatooor" }
+is-it-maintained-issue-resolution = { repository = "jemallocatooor/jemallocatooor" }
+is-it-maintained-open-issues = { repository = "jemallocatooor/jemallocatooor" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
-tikv-jemallocator = { version = "0.6.0", path = "../jemallocator", optional = true }
+jemallocatooor = { version = "0.6.0", path = "../jemallocatooor", optional = true }
 cfg-if = "0.1"
 
 [features]
 default = []
 # Unconditionally sets jemalloc as the global allocator:
-force_global_jemalloc = [ "tikv-jemallocator" ]
+force_global_jemalloc = [ "jemallocatooor" ]
 
 # To enable `jemalloc` as the `#[global_allocator]` by default
 # for a particular target, white-list the target explicitly here:
 
 [target.'cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd", target_os = "openbsd"))'.dependencies]
-tikv-jemallocator = { version = "0.6.0", path = "../jemallocator", optional = false }
+jemallocatooor = { version = "0.6.0", path = "../jemallocatooor", optional = false }
 
 # FIXME: https://github.com/gnzlbg/jemallocator/issues/91
 # [target.'cfg(target_os = "windows")'.dependencies]
-# jemallocator = { path = "../jemallocator" }
+# jemallocator = { path = "../jemallocatooor" }
 
 # `jemalloc` is known not to work on - see `jemalloc-sys/build.rs`.
 # - rumprun

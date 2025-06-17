@@ -1,0 +1,45 @@
+[package]
+name = "jemallocatooor-ctl"
+version = "0.6.0"
+authors = [
+    "Steven Fackler <sfackler@gmail.com>",
+    "Gonzalo Brito Gadeschi <gonzalobg88@gmail.com>",
+    "The TiKV Project Developers",
+]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+categories = ["memory-management", "api-bindings", "development-tools" ]
+keywords = ["allocator", "jemalloc"]
+repository = "https://github.com/jemallocatooor/jemallocatooor"
+homepage = "https://github.com/jemallocatooor/jemallocatooor"
+documentation = "https://docs.rs/jemallocatooor-ctl"
+description = """
+A safe wrapper over jemalloc's control and introspection APIs
+"""
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "jemallocatooor/jemallocatooor" }
+codecov = { repository = "jemallocatooor/jemallocatooor" }
+is-it-maintained-issue-resolution = { repository = "jemallocatooor/jemallocatooor" }
+is-it-maintained-open-issues = { repository = "jemallocatooor/jemallocatooor" }
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+jemallocatooor-sys = { path = "../jemallocatooor-sys", version = "0.6.0" }
+libc = { version = "0.2", default-features = false }
+paste = "1"
+
+[dev-dependencies]
+jemallocatooor = { path = "../jemallocatooor", version = "0.6.0" }
+
+[features]
+default = []
+stats = ["jemallocatooor-sys/stats"]
+profiling = ["jemallocatooor-sys/profiling"]
+use_std = [ "libc/use_std" ]
+disable_initial_exec_tls = ["jemallocatooor-sys/disable_initial_exec_tls"]
+
+[package.metadata.docs.rs]
+rustdoc-args = [ "--cfg", "jemallocator_docs" ]
+features = ["stats", "profiling", "use_std"]

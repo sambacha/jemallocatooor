@@ -10,7 +10,7 @@
 
 ## Platform support
 
-Supported on all platforms supported by the [`tikv-jemallocator`] crate.
+Supported on all platforms supported by the [`jemallocatooor`] crate.
 
 ## Example
 
@@ -61,10 +61,10 @@ Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in `jemalloc-ctl` by you, as defined in the Apache-2.0 license,
 shall be dual licensed as above, without any additional terms or conditions.
 
-[`tikv-jemallocator`]: https://github.com/tikv/jemallocator
-[travis]: https://travis-ci.com/tikv/jemallocator
-[Travis-CI Status]: https://travis-ci.com/tikv/jemallocator.svg?branch=master
-[Latest Version]: https://img.shields.io/crates/v/tikv-jemallocator.svg
-[crates.io]: https://crates.io/crates/tikv-jemallocator
-[docs]: https://docs.rs/tikv-jemallocator/badge.svg
-[docs.rs]: https://docs.rs/tikv-jemallocator/
+[`jemallocatooor`]: https://github.com/jemallocatooor/jemallocatooor
+[travis]: https://travis-ci.com/jemallocatooor/jemallocatooor
+[Travis-CI Status]: https://travis-ci.com/jemallocatooor/jemallocatooor.svg?branch=master
+[Latest Version]: https://img.shields.io/crates/v/jemallocatooor.svg
+[crates.io]: https://crates.io/crates/jemallocatooor
+[docs]: https://docs.rs/jemallocatooor/badge.svg
+[docs.rs]: https://docs.rs/jemallocatooor/
