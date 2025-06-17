@@ -1,2 +1,2 @@
 [workspace]
-members = ["jemallocator", "jemallocator-global", "jemalloc-ctl", "jemalloc-sys"]
+members = ["jemallocatooor", "jemallocatooor-global", "jemallocatooor-ctl", "jemallocatooor-sys"]
