@@ -1,2 +1,9 @@
 target
 Cargo.lock
+.DS_Store
+_worktree/
+dist/
+*.cov
+*.pyc
+.venv
+*.py
