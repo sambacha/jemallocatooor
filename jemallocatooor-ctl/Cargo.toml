@@ -28,7 +28,7 @@ maintenance = { status = "actively-developed" }
 [dependencies]
 jemallocatooor-sys = { path = "../jemallocatooor-sys", version = "0.6.0" }
 libc = { version = "0.2", default-features = false }
-paste = "1"
+paste2 = "1.1"
 
 [dev-dependencies]
 jemallocatooor = { path = "../jemallocatooor", version = "0.6.0" }
