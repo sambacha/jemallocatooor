@@ -11,7 +11,7 @@ Add it as a dependency:
 ```toml
 # Cargo.toml
 [dependencies]
-tikv-jemallocator-global = "0.6.0"
+jemallocatooor-global = "0.6.0"
 ```
 
 and `jemalloc` will be used as the `#[global_allocator]` on targets that support
@@ -22,7 +22,7 @@ it.
 * `force_global_jemalloc` (disabled by default): unconditionally sets `jemalloc`
   as the `#[global_allocator]`.
 
-[`tikv-jemallocator`]: https://github.com/tikv/jemallocator/
+[`jemallocatooor`]: https://github.com/sambacha/jemallocatooor/
 
 ## Platform support 
 
@@ -46,12 +46,12 @@ at your option.
 ## Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in `tikv-jemallocator-global` by you, as defined in the Apache-2.0 license,
+for inclusion in `jemallocatooor-global` by you, as defined in the Apache-2.0 license,
 shall be dual licensed as above, without any additional terms or conditions.
 
-[travis]: https://travis-ci.com/tikv/jemallocator
-[Travis-CI Status]: https://travis-ci.com/tikv/jemallocator.svg?branch=master
-[Latest Version]: https://img.shields.io/crates/v/tikv-jemallocator.svg
-[crates.io]: https://crates.io/crates/tikv-jemallocator
-[docs]: https://docs.rs/tikv-jemallocator/badge.svg
-[docs.rs]: https://docs.rs/tikv-jemallocator/
+[travis]: https://travis-ci.com/sambacha/jemallocatooor
+[Travis-CI Status]: https://travis-ci.com/sambacha/jemallocatooor.svg?branch=master
+[Latest Version]: https://img.shields.io/crates/v/jemallocatooor.svg
+[crates.io]: https://crates.io/crates/jemallocatooor
+[docs]: https://docs.rs/jemallocatooor/badge.svg
+[docs.rs]: https://docs.rs/jemallocatooor/

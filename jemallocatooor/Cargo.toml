@@ -1,0 +1,61 @@
+[package]
+name = "jemallocatooor"
+# Make sure to update the version in the README as well:
+version = "0.6.0"
+authors = [
+    "Alex Crichton <alex@alexcrichton.com>",
+    "Gonzalo Brito Gadeschi <gonzalobg88@gmail.com>",
+    "Simon Sapin <simon.sapin@exyr.org>",
+    "Steven Fackler <sfackler@gmail.com>",
+    "sambacha",
+]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["allocator", "jemalloc"]
+categories = ["memory-management", "api-bindings"]
+repository = "https://github.com/sambacha/jemallocatooor"
+homepage = "https://github.com/sambacha/jemallocatooor"
+documentation = "https://docs.rs/jemallocator"
+description = """
+A Rust allocator backed by jemalloc
+"""
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "sambacha/jemallocatooor" }
+codecov = { repository = "sambacha/jemallocatooor" }
+is-it-maintained-issue-resolution = { repository = "sambacha/jemallocatooor" }
+is-it-maintained-open-issues = { repository = "sambacha/jemallocatooor" }
+maintenance = { status = "actively-developed" }
+
+[lib]
+test = false
+bench = false
+
+[[test]]
+name = "ffi"
+required-features = ["stats"]
+
+[dependencies]
+jemallocatooor-sys = { path = "../jemallocatooor-sys", version = "0.6.0", default-features = false }
+libc = { version = "^0.2.8", default-features = false }
+
+[dev-dependencies]
+paste = "1"
+jemallocatooor-ctl = { path = "../jemallocatooor-ctl", version = "0.6.0" }
+
+[features]
+default = ["background_threads_runtime_support"]
+alloc_trait = []
+profiling = ["jemallocatooor-sys/profiling"]
+debug = ["jemallocatooor-sys/debug"]
+stats = ["jemallocatooor-sys/stats"]
+background_threads_runtime_support = ["jemallocatooor-sys/background_threads_runtime_support"]
+background_threads = ["jemallocatooor-sys/background_threads"]
+unprefixed_malloc_on_supported_platforms = ["jemallocatooor-sys/unprefixed_malloc_on_supported_platforms"]
+disable_initial_exec_tls = ["jemallocatooor-sys/disable_initial_exec_tls"]
+disable_cache_oblivious = ["jemallocatooor-sys/disable_cache_oblivious"]
+
+[package.metadata.docs.rs]
+features = []
+rustdoc-args = [ "--cfg", "jemallocator_docs" ]
