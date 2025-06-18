@@ -46,7 +46,6 @@ jemallocatooor-ctl = { path = "../jemallocatooor-ctl", version = "0.6.0" }
 
 [features]
 default = ["background_threads_runtime_support"]
-alloc_trait = []
 profiling = ["jemallocatooor-sys/profiling"]
 debug = ["jemallocatooor-sys/debug"]
 stats = ["jemallocatooor-sys/stats"]

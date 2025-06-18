@@ -21,10 +21,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::profiling;
+    /// use jemallocatooor_ctl::profiling;
     /// let lg_prof_interval = profiling::lg_prof_interval::read().unwrap();
     /// println!("average interval between memory profile dumps: {}", lg_prof_interval);
     /// # }
@@ -46,10 +46,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::profiling;
+    /// use jemallocatooor_ctl::profiling;
     /// let lg_prof_sample = profiling::lg_prof_sample::read().unwrap();
     /// println!("average interval between allocation samples: {}", lg_prof_sample);
     /// # }
@@ -76,10 +76,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::profiling;
+    /// use jemallocatooor_ctl::profiling;
     /// let prof_final = profiling::prof_final::read().unwrap();
     /// println!("dump final memory usage to file: {}", prof_final);
     /// # }
@@ -113,10 +113,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::profiling;
+    /// use jemallocatooor_ctl::profiling;
     /// let prof = profiling::prof::read().unwrap();
     /// println!("is memory profiling enabled: {}", prof);
     /// # }
@@ -143,10 +143,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::profiling;
+    /// use jemallocatooor_ctl::profiling;
     /// let prof_leak = profiling::prof_leak::read().unwrap();
     /// println!("is leak reporting enabled: {}", prof_leak);
     /// # }

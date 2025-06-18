@@ -4,7 +4,7 @@
 #![cfg(not(feature = "unprefixed_malloc_on_supported_platforms"))]
 #![cfg(not(target_env = "musl"))]
 
-use tikv_jemallocator::Jemalloc;
+use jemallocatooor::Jemalloc;
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;
@@ -28,5 +28,5 @@ pub static malloc_conf: Option<&'static libc::c_char> = Some(unsafe {
 #[test]
 fn background_threads_enabled() {
     // Background threads are unconditionally enabled at run-time by default.
-    assert!(tikv_jemalloc_ctl::opt::background_thread::read().unwrap(),);
+    assert!(jemallocatooor_ctl::opt::background_thread::read().unwrap(),);
 }

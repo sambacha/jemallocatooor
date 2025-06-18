@@ -13,10 +13,10 @@ option! {
     ///
     /// ```
     /// # #[global_allocator]
-    /// # static ALLOC: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
+    /// # static ALLOC: jemallocatooor::Jemalloc = jemallocatooor::Jemalloc;
     /// #
     /// # fn main() {
-    /// use tikv_jemalloc_ctl::config;
+    /// use jemallocatooor_ctl::config;
     /// let malloc_conf = config::malloc_conf::mib().unwrap();
     /// println!("default malloc conf: {}", malloc_conf.read().unwrap());
     /// # }

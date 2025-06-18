@@ -123,7 +123,7 @@ where
         }
         opts[i] = 0;
 
-        tikv_jemalloc_sys::malloc_stats_print(
+        jemallocatooor_sys::malloc_stats_print(
             Some(callback::<W>),
             &mut state as *mut _ as *mut c_void,
             opts.as_ptr(),

@@ -1,7 +1,8 @@
 //! Benchmarks the cost of the different allocation functions by doing a
 //! roundtrip (allocate, deallocate).
+//! Note: This benchmark is disabled because it relied on the deprecated Alloc trait.
+#![cfg(feature = "disabled_benchmark")]
 #![feature(test, allocator_api)]
-#![cfg(feature = "alloc_trait")]
 
 extern crate test;
 
@@ -12,7 +13,7 @@ use std::{
     ptr,
 };
 use test::Bencher;
-use tikv_jemalloc_sys::MALLOCX_ALIGN;
+use jemallocatooor_sys::MALLOCX_ALIGN;
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;

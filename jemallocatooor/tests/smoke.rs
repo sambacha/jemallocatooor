@@ -1,5 +1,5 @@
 use std::alloc::{GlobalAlloc, Layout};
-use tikv_jemallocator::Jemalloc;
+use jemallocatooor::Jemalloc;
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;

@@ -1,6 +1,6 @@
 use std::alloc::{GlobalAlloc, Layout};
-use tikv_jemalloc_ctl::{Access, AsName};
-use tikv_jemallocator::Jemalloc;
+use jemallocatooor_ctl::{Access, AsName};
+use jemallocatooor::Jemalloc;
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;
