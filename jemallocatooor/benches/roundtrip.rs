@@ -6,6 +6,7 @@
 
 extern crate test;
 
+use jemallocatooor_sys::MALLOCX_ALIGN;
 use jemallocator::Jemalloc;
 use libc::c_int;
 use std::{
@@ -13,7 +14,6 @@ use std::{
     ptr,
 };
 use test::Bencher;
-use jemallocatooor_sys::MALLOCX_ALIGN;
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;

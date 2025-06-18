@@ -1,5 +1,5 @@
-use std::alloc::{GlobalAlloc, Layout};
 use jemallocatooor::Jemalloc;
+use std::alloc::{GlobalAlloc, Layout};
 
 #[global_allocator]
 static A: Jemalloc = Jemalloc;

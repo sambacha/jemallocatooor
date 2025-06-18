@@ -131,7 +131,6 @@ unsafe impl GlobalAlloc for Jemalloc {
     }
 }
 
-
 /// Return the usable size of the allocation pointed to by ptr.
 ///
 /// The return value may be larger than the size that was requested during allocation.
